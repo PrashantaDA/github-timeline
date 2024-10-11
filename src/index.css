@@ -1,0 +1,30 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.timeline {
+	border-left: 2px solid #d1d5db;
+	padding-left: 20px;
+	position: relative;
+}
+
+.timeline-item::before {
+	content: "";
+	position: absolute;
+	left: -10px;
+	top: 0;
+	height: 12px;
+	width: 12px;
+	background-color: #10b981;
+	border-radius: 50%;
+	transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item:hover::before {
+	transform: scale(1.2);
+}
+
+.bg-f9fafb {
+	background-color: #f9fafb;
+}
